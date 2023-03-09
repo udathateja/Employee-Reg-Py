@@ -1,0 +1,12 @@
+{% extends 'employee/base.html' %}
+
+{% block content %}
+<h2>This is employee Update Page</h2>
+<form action="" method='POST'>
+  {% csrf_token %}
+  
+  {{form.as_p}}
+  <input type='submit' class='btn btn-success' value='Confirm'>
+  <a href="{% url 'employee_list' %}" class='btn btn-info'>Back to list</a>
+</form>
+{% endblock %}
